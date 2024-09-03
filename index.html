@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Calculations</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 200px;
+            background-color: #4472C4;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 2px solid #000;
+            margin: 0 auto;
+        }
+
+        .container img {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="https://www.svgrepo.com/show/405813/hollow-red-circle.svg" alt="Circle" id="circle" onclick="calculateCircle()">
+    <img src="https://thumbs.dreamstime.com/b/d-rendering-many-blocks-different-colors-making-up-one-hollow-square-shape-top-view-building-sets-toys-games-leisure-87327642.jpg" alt="Square" id="square" onclick="calculateSquare()">
+    <img src="https://cdn-icons-png.flaticon.com/512/9548/9548869.png" alt="Cylinder" id="cylinder" onclick="calculateCylinder()">
+    <img src="https://www.vedantu.com/seo/content-images/7fb1b9e9-37b1-4e6e-8e63-efc300db34eb.png" alt="Simple Interest" id="simple_interest" onclick="calculateInterest()">
+    <img src="https://tse4.mm.bing.net/th?id=OIP.h2wPoGvOHWQN-ZZXqScNhgHaDY&pid=Api&P=0&h=180" alt="ABC" id="abc">
+</div>
+
+<script>
+    function calculateCircle() {
+        let radius = prompt('Enter the radius of the circle:');
+        let area = Math.PI * radius * radius;
+        alert(`The area of the circle is: ${area}`);
+    }
+
+    function calculateSquare() {
+        let side = prompt('Enter the side of the square:');
+        let area = side * side;
+        alert(`The area of the square is: ${area}`);
+    }
+
+    function calculateCylinder() {
+        let radius = prompt('Enter the radius of the cylinder:');
+        let height = prompt('Enter the height of the cylinder:');
+        let volume = Math.PI * radius * radius * height;
+        alert(`The volume of the cylinder is: ${volume}`);
+    }
+
+    function calculateInterest() {
+        let principal = prompt('Enter the principal amount:');
+        let rate = prompt('Enter the rate of interest:');
+        let time = prompt('Enter the time period in years:');
+        let interest = (principal * rate * time) / 100;
+        alert(`The simple interest is: ${interest}`);
+    }
+</script>
+
+</body>
+</html>
